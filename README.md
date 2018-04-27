@@ -46,6 +46,6 @@ cordova.plugins.BaiduMobStatistics.onEventEndWithAttributes(eventId, eventLabel,
 最简单的页面路径分析，在app.js里面添加$stateChangeStart监听即可实现
 
     $rootScope.$on('$stateChangeStart',  function (event, toState, toParams, fromState, fromParams) {
-          cordova.plugins.BaiduMobStatistics.onPageStart(toState.name);
-          cordova.plugins.BaiduMobStatistics.onPageEnd(fromState.name)；
+          cordova.plugins.BaiduMobStatistics.onPageStart(toState.name);
+          cordova.plugins.BaiduMobStatistics.onPageEnd(fromState.name)；
     });
