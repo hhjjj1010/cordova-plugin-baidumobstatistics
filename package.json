@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-baidumobstatistics",
+  "version": "0.0.1",
+  "description": "a cordova plugin, a JS version of baidu-mob-statistics",
+  "cordova": {
+    "id": "cordova-plugin-baidumobstatistics",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-plugin-baidumobstatistics",
+    "baidumobstatistics",
+    "BaiduMobStatistics"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhjjj1010/cordova-plugin-baidumobstatistics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hhjjj1010/cordova-plugin-baidumobstatistics/issues"
+  },
+  "homepage": "https://github.com/hhjjj1010/cordova-plugin-baidumobstatistics#readme",
+  "author": "hhjjj1010",
+  "license": "ISC"
+}

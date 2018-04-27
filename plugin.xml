@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-baidumobstatistics" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>BaiduMobStatistics</name>
+    <preference name="IOSAPPID" />
+    <preference name="ANDROIDAPPID" />
+    <js-module name="BaiduMobStatistics" src="www/BaiduMobStatistics.js">
+        <clobbers target="cordova.plugins.BaiduMobStatistics" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="BaiduMobStatistics">
+                <param name="android-package" value="cn.hhjjj.baiduMobStatistics.CDVBaiduMobStatistics" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.GET_TASKS" />
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="BaiduMobAd_STAT_ID" android:value="$ANDROIDAPPID" />
+            <meta-data android:name="BaiduMobAd_CHANNEL" android:value="test channel" />
+            <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" />
+            <meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START" />
+            <meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false" />
+            <meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true" />
+            <meta-data android:name="BaiduMobAd_GPS_LOCATION" android:value="true" />
+            <meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true" />
+        </config-file>
+        <framework src="src/android/plugin.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/CDVBaiduMobStatistics.java" target-dir="src/cn/hhjjj/baiduMobStatistics"
+        />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="BaiduMobStatistics">
+                <param name="ios-package" value="CDVBaiduMobStatistics" />
+            </feature>
+            <preference name="appid" value="$IOSAPPID" />
+        </config-file>
+        <header-file src="src/ios/libs/BaiduMobStat.h" />
+        <source-file src="src/ios/CDVBaiduMobStatistics.m" />
+        <source-file framework="true" src="src/ios/libs/libBaiduMobStat.a" />
+        <framework src="Security.framework" weak="true" />
+        <framework src="CoreLocation.framework" weak="true" />
+        <framework src="SystemConfiguration.framework" weak="true" />
+        <framework src="CoreTelephony.framework" weak="true" />
+        <framework src="CoreGraphics.framework" weak="true" />
+        <framework src="UIKit.framework" weak="true" />
+        <framework src="Foundation.framework" weak="true" />
+        <framework src="libz.1.2.5.tbd" weak="true" />
+        <framework src="libstdc++.tbd" weak="true" />
+        <framework src="AdSupport.framework" weak="true" />
+    </platform>
+</plugin>
