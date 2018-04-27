@@ -5,9 +5,10 @@
 ###### ps: 该插件只支持基础分析
 
 ### 支持平台
-1. iOS
+#### iOS
 iOS SDK v4.7.2
-2. Android
+
+#### Android
 Android SDK使用的是gradle上的最新版本，目前为v3.9.0.1。
 因为使用了gradle上最新版本的原因，所以每次同步的时间会相对长一点，使用android studio打包apk的时候就会有最直观的感受。
 
