@@ -1,3 +1,7 @@
+##### 2019.03.28更新说明
+iOS SDK更新为v4.9.5
+libstdc++.tbd更新为libc++.tbd，适配xcode 10
+
 ### 前言：
 百度移动统计官方有提供cordova插件，以及插件的使用Demo，具体请参看百度移动统计的开发文档。
 官方提供的插件功能齐全，但是封装得还不够傻瓜化。插件安装之后还需要修改原生的一些文件才能使用，这对不懂原生的cordova和ionic developer来说是很不友好的。
@@ -6,7 +10,8 @@
 
 ### 支持平台
 #### iOS
-iOS SDK v4.7.2
+iOS SDK v4.9.5
+xcode版本最低要求为xcode 10
 
 #### Android
 Android SDK使用的是gradle上的最新版本，目前为v3.9.0.1。
@@ -36,7 +41,7 @@ cordova.plugins.BaiduMobStatistics.onEventDuration(eventId, eventLabel, duration
 
 cordova.plugins.BaiduMobStatistics.onEventDurationWithAttributes(eventId, eventLabel, duration, attributes, successFn, errorFn)
 
-cordova.plugins.BaiduMobStatistics.onEventStart(eventId, eventLabel, successFn, errorFn) 
+cordova.plugins.BaiduMobStatistics.onEventStart(eventId, eventLabel, successFn, errorFn)
 
 cordova.plugins.BaiduMobStatistics.onEventEnd(eventId, eventLabel, successFn, errorFn)
 
