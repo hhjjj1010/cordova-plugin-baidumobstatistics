@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-baidumobstatistics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a cordova plugin, a JS version of baidu-mob-statistics",
   "cordova": {
     "id": "cordova-plugin-baidumobstatistics",
