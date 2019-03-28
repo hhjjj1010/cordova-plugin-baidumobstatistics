@@ -57,7 +57,7 @@
         <framework src="UIKit.framework" weak="true" />
         <framework src="Foundation.framework" weak="true" />
         <framework src="libz.1.2.5.tbd" weak="true" />
-        <framework src="libstdc++.tbd" weak="true" />
+        <framework src="libc++.tbd" weak="true" />
         <framework src="AdSupport.framework" weak="true" />
     </platform>
 </plugin>
